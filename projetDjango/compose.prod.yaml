@@ -2,11 +2,11 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
     ports:
-      - "8000:8000"
+      - "80:8000"
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
     volumes:
       - ./app:/app
     networks:
